@@ -1,17 +1,15 @@
 const net = require("net");
-//const host = "192.168.0.11";
-//const port = 50541;
 
-const { IP, PORT } = require("./constants");
+const { host, port } = require("./constants");
 
 const connect = function() {
   const conn = net.createConnection({
-    IP,
-    PORT,
+    host,
+    port,
   });
   
   conn.setEncoding("utf8");
-  conn.on("connect", (client) => {
+  conn.on("connect", () => {
     console.log("New client connected!");
     setTimeout(() => {
       conn.write("Name: MAC");

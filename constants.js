@@ -1,4 +1,4 @@
 module.exports = {
-  const IP = "localhost";
-  const PORT = 50541;
+  host: "localhost",
+  port: 50541
 };
