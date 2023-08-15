@@ -1,33 +1,7 @@
 const {connect, host, port } = require("./client.js");
 
-const setupInput = function () {
-  const stdin = process.stdin;
-  stdin.setRawMode(true);
-  stdin.setEncoding("utf8");
-  stdin.resume();
+const { setupInput } = require("./input");
 
-  stdin.on("data", handleUserInput);
+console.log("Connecting ...");
 
-  return stdin;
-};
-
-const handleUserInput = function () {
-  process.stdin.on('data', (key) => {
-    if (key.toString() === '\u0003') {
-      process.exit();
-    }
-process.stdin.on('data', (key) => {
-  process.stdout.write('.');
-});
-process.stdin.on('data', (key) => {
-  process.stdout.write('.');
-});
-process.stdin.on('data', (key) => {
-  process.stdout.write('.');
-});
-
-});
-};
-
-handleUserInput()
-console.log('after callback');
+setupInput(connect());
