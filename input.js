@@ -8,7 +8,7 @@ const setupInput = (conn) => {
   stdin.setEncoding("utf8");
   stdin.resume();
 
-  stdin.on('data', handleUserInput) 
+  stdin.on('data', handleUserInput);
   return stdin;
 };
 
