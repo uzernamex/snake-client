@@ -20,7 +20,10 @@ const handleUserInput = function(data) {
     a: 'Move: left',
     s: 'Move: down',
     d: 'Move: right',
-    x: 'Say: Hello World!'
+    x: 'Say: Hello World!',
+    z: 'Say: too bad!',
+    c: 'Say: nice try.',
+    v: 'Say: goodbye'
   };
 
   if (data === '\u0003') {
