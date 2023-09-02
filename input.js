@@ -13,7 +13,6 @@ const setupInput = (conn) => {
 };
 
 const handleUserInput = function(data) {
-  console.log(data);
 
   const keyMessageMap = {
     w: 'Move: up',

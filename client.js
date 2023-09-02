@@ -15,7 +15,16 @@ const connect = function() {
       conn.write("Name: MAC");
     }, 200);
   });
+  conn.on("end", () => {
+    console.log("GAME OVER!!!")
+    process.exit();
+  }) 
+  conn.on("error", () => {
+    console.log("GAME OVER!!!");
+    process.exit();
+  }) 
   return conn;
 };
+
 
 module.exports = {connect};
