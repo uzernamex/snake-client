@@ -30,6 +30,7 @@ const handleUserInput = function(data) {
 
   if (data === '\u0003') {
     console.log("Thanks for playing along, ciao!");
+    process.write("GAME OVER");
     process.exit();
   }
 
