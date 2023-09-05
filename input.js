@@ -12,6 +12,9 @@ const setupInput = (conn) => {
   return stdin;
 };
 
+
+//TO HANDLE THE KEYBOARD INPUTS
+
 const handleUserInput = function(data) {
 
   const keyMessageMap = {

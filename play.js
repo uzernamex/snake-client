@@ -1,3 +1,5 @@
+//CLIENT SETUP
+
 const {connect, host, port } = require("./client.js");
 
 const { setupInput } = require("./input");

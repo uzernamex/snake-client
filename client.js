@@ -2,12 +2,17 @@ const net = require("net");
 
 const { host, port } = require("./constants");
 
+
+//ESTABISH A CONNECTION
+
 const connect = function() {
   const conn = net.createConnection({
     host,
     port,
   });
-  
+
+//MESSAGES TO USER
+
   conn.setEncoding("utf8");
   conn.on("connect", () => {
     console.log("New client connected!");
@@ -16,15 +21,14 @@ const connect = function() {
     }, 200);
   });
   conn.on("end", () => {
-    console.log("GAME OVER!!!")
+    conn.write("GAME OVER!!!");
     process.exit();
-  }) 
+  });
   conn.on("error", () => {
-    console.log("GAME OVER!!!");
+    conn.write("GAME OVER");
     process.exit();
-  }) 
+  });
   return conn;
 };
-
 
 module.exports = {connect};

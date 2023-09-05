@@ -16,8 +16,6 @@ Follow these steps to play:
 **Require it:**
 
 `const _ = require('@uzernamex/snake');`
-["A snake on the move!"](#)
-![🐍][def]
 
 
 
@@ -35,10 +33,9 @@ Follow these steps to play:
 ## Getting Started
 
 - Follow steps inside the snek server repo to run the server side: `npm run play`
+
 - Run the development snake client using the `node play.js` command.
 
 
-["A snake on the move!"](#)
-![🐍][def]
 
-Have Fun!
+*Have Fun!*
